@@ -1,0 +1,64 @@
+.crowdfunding-header {
+  width: 100%;
+  height: 30.6rem; // 300px
+
+  display: flex;
+
+  background-image: var(--background-hero-desktop);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+
+  background-position: left;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.crowdfunding-nav {
+  width: 100%;
+  max-width: var(--desktop-width);
+  padding: 2rem 1.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.crowdfunding-nav__logo {
+  font-size: 2.8rem;
+  color: var(--color-white);
+
+  line-height: 1.4;
+  font-weight: 700;
+
+  text-transform: lowercase;
+}
+
+.crowdfunding-nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crowdfunding-nav__link a {
+  display: block;
+  padding: 2rem 1.6rem;
+
+  font-size: 1.6rem;
+  color: var(--color-white);
+
+  opacity: 0.8;
+  line-height: 1.4;
+
+  transition: opacity 0.6s ease;
+}
+
+.crowdfunding-nav__link a:last-child {
+  padding-right: 0;
+}
+
+.crowdfunding-nav__link a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

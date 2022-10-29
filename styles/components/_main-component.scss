@@ -1,0 +1,160 @@
+.crowdfunding-main {
+  width: 100%;
+  max-width: 780px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.crowdfunding-overview {
+  position: relative;
+
+  width: 100%;
+
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+
+  //margin-top: -2rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--color-border-line);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-50%);
+
+  background-color: var(--color-white);
+}
+
+.crowdfunding-overview__title {
+  margin-top: 1.2rem;
+
+  font-size: 2.8rem;
+  font-weight: 700;
+
+  color: var(--color-black);
+
+  line-height: 1.4;
+  text-align: center;
+}
+
+.crowdfunding-overview__text {
+  margin: 0.8rem 0;
+
+  color: var(--color-dark-gray);
+  font-size: 1.6rem;
+
+  line-height: 1.6;
+  text-align: center;
+}
+
+.crowdfunding-overview__actions {
+  width: 100%;
+  max-width: 600px;
+
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crowdfunding-button-back {
+  width: min(100%, 220px);
+  padding: 2rem 3rem;
+
+  border-radius: 3rem;
+  background-color: var(--color-primary-moderate-cyan);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-white);
+  line-height: 1.4;
+
+  cursor: pointer;
+  transition: background 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.crowdfunding-button-back:hover {
+  background-color: var(--color-primary-dark-cyan);
+}
+
+.crowdfunding-bookmark {
+  position: relative;
+
+  width: min(100%, 220px);
+  padding: 2rem 3rem;
+
+  background-color: var(--color-light-gray);
+  border-radius: 3rem;
+
+  font-size: 1.6rem;
+  color: var(--color-black);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  line-height: 1.4;
+
+  &:hover .crowdfunding-bookmark__mark {
+    opacity: 0.5;
+  }
+
+  .crowdfunding-bookmark__mark {
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+
+    background-color: var(--color-black);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .crowdfunding-bookmark__label {
+    margin-left: 2rem;
+  }
+}
+
+.crowdfunding-overview__circle {
+  position: absolute;
+  z-index: 1;
+
+  top: 0;
+  left: 50%;
+
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+
+  overflow: hidden;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.crowdfunding-overview__circle img {
+  width: 100%;
+  height: 100%;
+}

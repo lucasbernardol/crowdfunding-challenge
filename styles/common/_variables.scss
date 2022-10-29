@@ -1,0 +1,33 @@
+:root {
+  --color-primary-moderate-cyan: hsl(176, 50%, 47%);
+  --color-primary-dark-cyan: hsl(176, 72%, 28%);
+
+  --color-black: hsl(0, 0%, 0%);
+  --color-dark-gray: hsl(0, 0%, 48%);
+  --color-light-gray: rgb(204, 204, 204);
+
+  --color-background: #f0f0f5;
+  --color-white: #ffffff;
+
+  --color-border-line: #dfdfdf;
+
+  --background-hero-desktop: url('../assets/images/image-hero-desktop.jpg');
+  --desktop-width: 1200px; // Seed: style-guide.md
+
+  font-size: 62.5%; /** 10px - (1.6 * 10) = 16 = 16px */
+}
+
+@media only screen and (max-width: 1024px) {
+  :root {
+    font-size: 56.26%; /* 9px */
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  :root {
+    /**
+     * 16 / 2 = 8px;
+     */
+    font-size: 50%;
+  }
+}

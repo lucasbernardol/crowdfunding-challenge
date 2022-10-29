@@ -1,29 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Crowdfunding product page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./dist/index.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <!-- prettier-ignore -->
+  <body data-id="body">
+    <div class="root" data-id="root">
+      <header class="crowdfunding-header">
+        <nav class="crowdfunding-nav">
+          <h1 class="crowdfunding-nav__logo">Crowdfunding</h1>
+
+          <ul class="crowdfunding-nav__links">
+            <li class="crowdfunding-nav__link">
+              <a href="#about" title="About">About</a>
+            </li>
+            <li class="crowdfunding-nav__link">
+              <a href="#discover" title="Discover">Discover</a>
+            </li>
+            <li class="crowdfunding-nav__link">
+              <a href="#get-started" title="Get Started">Get Started</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="crowdfunding-main" data-id="crowdfunding-main">
+          <section class="crowdfunding-overview">
+            <h2 class="crowdfunding-overview__title">Mastercraft Bamboo Monitor Riser</h2>
+            <p class="crowdfunding-overview__text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+
+            <div class="crowdfunding-overview__actions">
+              <button type="text" class="crowdfunding-button-back">
+                Back this project
+              </button>
+
+              <button type="text" class="crowdfunding-bookmark">
+                <div class="crowdfunding-bookmark__mark">
+                  <img class="crowdfunding-bookmark__icon" src="./assets/images/icon-bookmark.svg" alt="Crowdfunding bookmark svg icon.">
+                </div>
+
+                <span class="crowdfunding-bookmark__label">Bookmark</span>
+              </button>
+            </div>
+
+            <div class="crowdfunding-overview__circle">
+              <img class="crowdfunding-overview__circle-img" src="./assets/images/logo-mastercraft.svg" alt="Boomark icon">
+            </div>
+          </section>
+      </main>
+    </div>
+
   
-  <title>Frontend Mentor | Crowdfunding product page</title>
+ 
+  
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  About
-  Discover
-  Get Started
+  
+  
 
-  Mastercraft Bamboo Monitor Riser
-  A beautiful & handcrafted monitor stand to reduce neck and eye strain.
-
-  Back this project
-  Bookmark
+  
+  
 
   $89,914 of $100,000 backed
   5,007 total backers
