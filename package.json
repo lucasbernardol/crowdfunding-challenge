@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "husky:install": "husky install"
+    "husky:install": "husky install",
+    "dev:sass": "sass ./styles/main.scss -w -s compressed dist/index.css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "husky": "^8.0.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0"
   }
 }
