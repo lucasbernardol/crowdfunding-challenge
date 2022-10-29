@@ -1,5 +1,26 @@
 {
-  "dependencies": {
+  "name": "crowdfunding-challenge",
+  "version": "1.0.0",
+  "description": "Crowdfunding",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "husky:install": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasbernardol/crowdfunding-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasbernardol/crowdfunding-challenge/issues"
+  },
+  "homepage": "https://github.com/lucasbernardol/crowdfunding-challenge#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^8.0.1",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0"
   }
