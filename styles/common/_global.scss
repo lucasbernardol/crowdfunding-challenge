@@ -10,6 +10,10 @@
   font-family: 'Commissioner', sans-serif;
 }
 
+*::selection {
+  background-color: rgba(60, 180, 172, 0.3);
+}
+
 ul {
   list-style: none;
 }
@@ -43,4 +47,22 @@ img {
 
 body {
   background-color: var(--color-background);
+}
+
+.sr-only {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  width: 0px;
+  height: 0px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  font-size: 0;
+
+  user-select: none;
+  pointer-events: none;
 }

@@ -1,0 +1,166 @@
+.crowdfunding-about {
+  width: 100%;
+
+  margin-top: 3rem;
+  padding: 4rem;
+
+  background-color: var(--color-white);
+
+  border: 1px solid var(--color-border-line);
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 2.8rem;
+  }
+
+  .crowdfunding-about__title {
+    font-size: 3.2rem;
+
+    color: var(--color-black);
+    line-height: 1.4;
+  }
+
+  .crowdfunding-about__text {
+    margin-top: 1.2rem;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    color: var(--color-dark-gray);
+
+    line-height: 1.6;
+  }
+
+  .crowdfunding-about__summary {
+    //margin-top: 2rem;
+
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    color: var(--color-dark-gray);
+    line-height: 1.4;
+  }
+
+  .crowdfunding-about__prices {
+    width: 100%;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    .crowdfunding-about__price {
+      width: 100%;
+
+      margin-bottom: 2.8rem;
+      padding: 3rem;
+
+      border: 1px solid var(--color-light-gray);
+      border-radius: 0.8rem;
+
+      &.--out-stock {
+        opacity: 0.4;
+
+        button {
+          background-color: var(--color-dark-gray);
+
+          pointer-events: none;
+          user-select: none;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      header {
+        width: 100%;
+        margin-bottom: 1.6rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-weight: 500;
+          font-size: 1.8rem;
+
+          color: var(--color-primary-moderate-cyan);
+
+          line-height: 1.4;
+        }
+
+        h3 {
+          font-size: 2.2rem;
+          font-weight: 700;
+
+          color: var(--color-black);
+
+          line-height: 1.4;
+        }
+      }
+
+      footer {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        strong {
+          color: var(--color-black);
+
+          font-size: 2.4rem;
+          font-weight: 700;
+
+          line-height: 1.4;
+
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-left: 0.8rem;
+
+            font-size: 1.4rem;
+            color: var(--color-dark-gray);
+
+            line-height: 1.4;
+          }
+        }
+
+        button {
+          width: min(100%, 20rem); /** 200px **/
+          padding: 1.6rem 2rem;
+
+          margin-left: 2rem;
+
+          border-radius: 2.4rem;
+          background-color: var(--color-primary-moderate-cyan);
+
+          color: var(--color-white);
+
+          font-size: 1.6rem;
+          font-weight: 400;
+
+          transition: background 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
+          &:hover {
+            background-color: var(--color-primary-dark-cyan);
+          }
+        }
+      }
+
+      .crowdfunding-about__price_text {
+        margin: 2.4rem 0;
+
+        font-size: 1.6rem;
+        font-weight: 400;
+
+        color: var(--color-dark-gray);
+        line-height: 1.6rem;
+      }
+    }
+  }
+}

@@ -1,4 +1,11 @@
+// break points
+$break-normal: 1024px;
+$break-medium: 720px;
+$break-small: 345px;
+
 :root {
+  font-size: 62.5%; /** 10px - (1.6 * 10) = 16 = 16px */
+
   --color-primary-moderate-cyan: hsl(176, 50%, 47%);
   --color-primary-dark-cyan: hsl(176, 72%, 28%);
 
@@ -6,28 +13,50 @@
   --color-dark-gray: hsl(0, 0%, 48%);
   --color-light-gray: rgb(204, 204, 204);
 
-  --color-background: #f0f0f5;
+  --color-background: #fbfbff;
   --color-white: #ffffff;
 
   --color-border-line: #dfdfdf;
 
-  --background-hero-desktop: url('../assets/images/image-hero-desktop.jpg');
-  --desktop-width: 1200px; // Seed: style-guide.md
+  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-dark-overlay: rgba(0, 0, 0, 0.9);
 
-  font-size: 62.5%; /** 10px - (1.6 * 10) = 16 = 16px */
+  // Images
+  --background-hero-desktop: url('../assets/images/image-hero-desktop.jpg');
+  --background-hero-mobile: url('../assets/images/image-hero-mobile.jpg');
+
+  --desktop-width: 1200px; // Seed: style-guide.md
+  --margin-layout: -100px;
+
+  --z-index: 99;
+
+  // icons dimensions
+  --w-check: 9.2rem;
+  --h-check: 9.2rem;
+
+  // Diminsions
+  --w-check-button: 20rem;
+  --h-header: 40.6rem;
+
+  // fonts/sizes
+  --font-size-mediun: 56.26%;
+  --font-size-small: 50%;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: $break-normal) {
   :root {
-    font-size: 56.26%; /* 9px */
+    /*
+     * 9px 
+     */
+    font-size: var(--font-size-mediun);
   }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: $break-medium) {
   :root {
     /**
      * 16 / 2 = 8px;
      */
-    font-size: 50%;
+    font-size: var(--font-size-small);
   }
 }
