@@ -14,33 +14,52 @@
 
   background-color: var(--color-overlay);
 
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-
-  &.project-overlay--hidden {
+  &.project-overlay--hidden,
+  &.hidden {
     display: none;
   }
 
-  &:not(.project-overlay--hidden) {
-    display: block;
-
-    & {
-      .project-overlay__content {
-        margin: 3rem auto;
-      }
-    }
-  }
-
   .project-overlay__content {
-    width: min(80%, 720px);
+    position: relative;
+
+    width: min(90%, 780px);
+
     padding: 5rem;
+    margin: 3rem auto;
 
     border-radius: 0.8rem;
     border: 1px solid var(--color-border-line);
 
     background-color: var(--color-white);
+    animation: Smooth 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @media only screen and (max-width: $break-medium) {
+      padding: 2rem;
+    }
+
+    .close-overlay {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      width: 4.8rem;
+      height: 4.8rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 0;
+
+      border-radius: 50%;
+
+      background-color: transparent;
+      transition: background 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+      &:hover {
+        background-color: var(--color-light-gray);
+      }
+    }
 
     .project-overlay__title {
       margin-bottom: 2rem;
@@ -87,9 +106,22 @@
           margin-bottom: 0;
         }
 
-        &:hover {
-          &:not(.project-overlay__project--out-stock) {
+        &:not(.selected) {
+          &:hover {
             border-color: var(--color-primary-moderate-cyan);
+          }
+        }
+
+        &.selected {
+          border-color: var(--color-primary-dark-cyan);
+          border-width: 2px;
+
+          .project-bottom {
+            border-top-color: var(--color-primary-dark-cyan);
+
+            &.hidden {
+              display: flex;
+            }
           }
         }
 
@@ -100,12 +132,18 @@
         }
 
         .project-top {
+          pointer-events: none;
+
           width: 100%;
           padding: 3rem;
 
           display: flex;
           justify-content: flex-start;
           align-items: flex-start;
+
+          @media only screen and (max-width: $break-medium) {
+            padding: 1.8rem 1.4rem;
+          }
 
           .project-top__left {
             position: relative;
@@ -132,6 +170,7 @@
 
             .checkmark {
               position: relative;
+              pointer-events: none;
 
               display: flex;
               justify-content: center;
@@ -164,6 +203,7 @@
             flex-direction: column;
 
             .project-top__right__header {
+              pointer-events: none;
               width: 100%;
 
               display: flex;
@@ -171,6 +211,15 @@
               justify-content: space-between;
 
               margin-bottom: 1rem;
+
+              @media only screen and (max-width: $break-medium) {
+                align-items: flex-start;
+
+                label {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
 
               label {
                 font-size: 2rem;
@@ -186,15 +235,18 @@
                 strong {
                   color: var(--color-black);
                   font-weight: bold;
+                  pointer-events: none;
                 }
 
                 span {
                   color: var(--color-primary-moderate-cyan);
                   font-weight: bold;
+                  pointer-events: none;
                 }
               }
 
               & > span {
+                pointer-events: none;
                 font-size: 2rem;
                 color: var(--color-black);
 
@@ -216,6 +268,7 @@
               font-size: 1.6rem;
               color: var(--color-dark-gray);
               line-height: 1.4;
+              pointer-events: none;
             }
           }
         }
@@ -225,10 +278,21 @@
           padding: 3rem;
 
           border-top: 1px solid var(--color-border-line);
-
           display: flex;
+
           align-items: center;
           justify-content: space-between;
+
+          cursor: default;
+
+          @media only screen and (max-width: $break-medium) {
+            flex-direction: column;
+            padding: 1.6rem 0;
+
+            .project-bottom__actions {
+              margin-top: 1.6rem;
+            }
+          }
 
           &.hidden {
             display: none;

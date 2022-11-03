@@ -27,6 +27,7 @@
     />
 
     <link rel="stylesheet" type="text/css" href="./dist/index.css" />
+    <script defer src="./scripts/main.js"></script>
   </head>
 
   <body data-id="body">
@@ -70,7 +71,12 @@
           </p>
 
           <div class="crowdfunding-overview__actions">
-            <button type="text" class="crowdfunding-button-back">
+            <button
+              type="text"
+              class="crowdfunding-button-back"
+              title="Back this project"
+              data-id="project-back"
+            >
               Back this project
             </button>
 
@@ -232,10 +238,7 @@
       </section>
     </div>
 
-    <div
-      class="completed-overlay completed-overlay--hidden"
-      data-id="completed-overlay"
-    >
+    <div class="completed-overlay hidden" data-id="completed-overlay">
       <section class="completed-overlay__content">
         <img
           class="completed-overlay__icon"
@@ -251,11 +254,17 @@
           completed.</span
         >
 
-        <button type="button" class="completed-overlay__button">Got it!</button>
+        <button
+          type="button"
+          class="completed-overlay__button"
+          data-id="completed-close"
+        >
+          Got it!
+        </button>
       </section>
     </div>
 
-    <div class="project-overlay" data-id="project-overlay">
+    <div class="project-overlay hidden" data-id="project-overlay">
       <section class="project-overlay__content">
         <h2 class="project-overlay__title">Back this project</h2>
 
@@ -269,6 +278,7 @@
             action="/production/payment/{{id}}"
             method="POST"
             class="project-overlay__project"
+            data-ref="project"
           >
             <fieldset class="project-top">
               <legend class="sr-only">Payment method (selected)</legend>
@@ -298,7 +308,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="project-bottom">
+            <fieldset class="project-bottom hidden">
               <span>Enter your pledge</span>
 
               <div class="project-bottom__actions">
@@ -308,6 +318,8 @@
                     name="amount"
                     id="amount-stand"
                     value="25"
+                    required
+                    min="25"
                   />
                 </div>
 
@@ -320,6 +332,7 @@
             action="/production/payment/{{id}}"
             method="POST"
             class="project-overlay__project"
+            data-ref="project"
           >
             <fieldset class="project-top">
               <legend class="sr-only">Payment method (selected)</legend>
@@ -352,7 +365,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="project-bottom">
+            <fieldset class="project-bottom hidden">
               <span>Enter your pledge</span>
 
               <div class="project-bottom__actions">
@@ -362,6 +375,8 @@
                     name="amount"
                     id="amount-stand"
                     value="25"
+                    required
+                    min="25"
                   />
                 </div>
 
@@ -374,6 +389,7 @@
             action="/production/payment/{{id}}"
             method="POST"
             class="project-overlay__project"
+            data-ref="project"
           >
             <fieldset class="project-top">
               <legend class="sr-only">Payment method (selected)</legend>
@@ -409,7 +425,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="project-bottom">
+            <fieldset class="project-bottom hidden">
               <span>Enter your pledge</span>
 
               <div class="project-bottom__actions">
@@ -419,6 +435,8 @@
                     name="amount"
                     id="amount-stand"
                     value="25"
+                    required
+                    min="25"
                   />
                 </div>
 
@@ -431,6 +449,7 @@
             action="/production/payment/{{id}}"
             method="POST"
             class="project-overlay__project project-overlay__project--out-stock"
+            data-ref="project"
           >
             <fieldset class="project-top">
               <legend class="sr-only">Payment method (selected)</legend>
@@ -482,6 +501,13 @@
             </fieldset> -->
           </form>
         </div>
+
+        <button class="close-overlay" type="button" data-id="close-project">
+          <img
+            src="./assets/images/icon-close-modal.svg"
+            alt="Close modal image/icon"
+          />
+        </button>
       </section>
     </div>
   </body>

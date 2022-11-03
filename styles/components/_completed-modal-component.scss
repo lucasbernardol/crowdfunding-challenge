@@ -21,7 +21,7 @@
     height: var(--h-check);
   }
 
-  &.completed-overlay--hidden {
+  &.hidden {
     display: none;
   }
 
@@ -37,6 +37,8 @@
 
     justify-content: center;
     align-items: center;
+
+    animation: Smooth 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     .completed-overlay__title {
       margin-top: 4rem;
