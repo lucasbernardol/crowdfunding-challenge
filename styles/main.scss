@@ -1,5 +1,6 @@
 @charset "utf-8";
 
-@import './common';
+@import './partials/mixins';
 
+@import './common';
 @import './pages/crowdfunding';

@@ -10,12 +10,21 @@
   font-family: 'Commissioner', sans-serif;
 }
 
+*::after,
+*::before {
+  font-family: 'Commissioner', sans-serif;
+}
+
 *::selection {
-  background-color: rgba(60, 180, 172, 0.3);
+  background-color: var(--color-selection);
 }
 
 ul {
   list-style: none;
+}
+
+fieldset {
+  border: none;
 }
 
 button,
@@ -32,17 +41,8 @@ a {
 img {
   pointer-events: none;
 
-  object-fit: cover;
-  -o-object-fit: cover;
-  object-position: top;
-  -o-object-position: top;
-
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  -moz-user-focus: normal;
+  @include ObjectFit;
+  @include UserSelect;
 }
 
 body {

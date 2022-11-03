@@ -1,0 +1,6 @@
+@mixin ObjectFit {
+  object-fit: cover;
+  -o-object-fit: cover;
+  object-position: top;
+  -o-object-position: top;
+}

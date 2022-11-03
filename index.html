@@ -259,121 +259,228 @@
       <section class="project-overlay__content">
         <h2 class="project-overlay__title">Back this project</h2>
 
-        <span class="project-overlay__sumnary">
+        <span class="project-overlay__summary">
           Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
-          the world?</span
-        >
+          the world?
+        </span>
 
         <div class="project-overlay__projects">
-          <section class="project-overlay__project">
-            <div class="project-overlay__project__left">
-              <input type="checkbox" id="select1" title="Select" />
-            </div>
+          <form
+            action="/production/payment/{{id}}"
+            method="POST"
+            class="project-overlay__project"
+          >
+            <fieldset class="project-top">
+              <legend class="sr-only">Payment method (selected)</legend>
 
-            <div class="project-overlay__project__right">
-              <header class="project-overlay__header">
-                <label for="select1"> Pledge with no reward </label>
-              </header>
+              <div class="project-top__left">
+                <input
+                  type="checkbox"
+                  name="select-bamboo-stand"
+                  id="select-no-reward"
+                />
 
-              <div class="project-overlay__main">
-                <span
-                  >Choose to support us without a reward if you simply believe
-                  in our project. As a backer, you will be signed up to receive
-                  product updates via email.</span
-                >
+                <span class="checkmark"></span>
               </div>
-            </div>
-          </section>
 
-          <section class="project-overlay__project">
-            <div class="project-overlay__project__left">
-              <input type="checkbox" id="select2" title="Select" />
-            </div>
+              <div class="project-top__right">
+                <div class="project-top__right__header">
+                  <label for="select-no-reward">
+                    <strong>Pledge with no reward</strong>
+                  </label>
+                </div>
 
-            <div class="project-overlay__project__right">
-              <header class="project-overlay__header">
-                <label for="select2">
-                  Bamboo Stand
+                <p class="project-top__text">
+                  Choose to support us without a reward if you simply believe in
+                  our project. As a backer, you will be signed up to receive
+                  product updates via email.
+                </p>
+              </div>
+            </fieldset>
 
-                  <span>Pledge $25 or more</span>
-                </label>
+            <fieldset class="project-bottom">
+              <span>Enter your pledge</span>
 
-                <span> 101 left</span>
-              </header>
+              <div class="project-bottom__actions">
+                <div>
+                  <input
+                    type="number"
+                    name="amount"
+                    id="amount-stand"
+                    value="25"
+                  />
+                </div>
 
-              <div class="project-overlay__main">
-                <span>
+                <button type="submit">Continue</button>
+              </div>
+            </fieldset>
+          </form>
+
+          <form
+            action="/production/payment/{{id}}"
+            method="POST"
+            class="project-overlay__project"
+          >
+            <fieldset class="project-top">
+              <legend class="sr-only">Payment method (selected)</legend>
+
+              <div class="project-top__left">
+                <input
+                  type="checkbox"
+                  name="select-bamboo-stand"
+                  id="select-stant"
+                />
+
+                <span class="checkmark"></span>
+              </div>
+
+              <div class="project-top__right">
+                <div class="project-top__right__header">
+                  <label for="select-stant">
+                    <strong>Bamboo Stand</strong>
+                    <span>Pledge $25 or more</span>
+                  </label>
+
+                  <span>101 <em>left</em></span>
+                </div>
+
+                <p class="project-top__text">
                   You get an ergonomic stand made of natural bamboo. You've
                   helped us launch our promotional campaign, and you’ll be added
-                  to a special Backer member list.</span
-                >
+                  to a special Backer member list.
+                </p>
+              </div>
+            </fieldset>
+
+            <fieldset class="project-bottom">
+              <span>Enter your pledge</span>
+
+              <div class="project-bottom__actions">
+                <div>
+                  <input
+                    type="number"
+                    name="amount"
+                    id="amount-stand"
+                    value="25"
+                  />
+                </div>
+
+                <button type="submit">Continue</button>
+              </div>
+            </fieldset>
+          </form>
+
+          <form
+            action="/production/payment/{{id}}"
+            method="POST"
+            class="project-overlay__project"
+          >
+            <fieldset class="project-top">
+              <legend class="sr-only">Payment method (selected)</legend>
+
+              <div class="project-top__left">
+                <input
+                  type="checkbox"
+                  name="select-bamboo-stand"
+                  id="select-stant-black"
+                />
+
+                <span class="checkmark"></span>
               </div>
 
-              <div class="project-overlay__footer">
-                Enter your pledge $25 Continue
-              </div>
-            </div>
-          </section>
+              <div class="project-top__right">
+                <div class="project-top__right__header">
+                  <label for="select-stant-black">
+                    <strong>Black Edition Stand</strong>
+                    <span>Pledge $75 or more</span>
+                  </label>
 
-          <section class="project-overlay__project">
-            <div class="project-overlay__project__left">
-              <input type="checkbox" id="select3" title="Select" />
-            </div>
+                  <span>
+                    64
+                    <em>left</em>
+                  </span>
+                </div>
 
-            <div class="project-overlay__project__right">
-              <header class="project-overlay__header">
-                <label for="select3">
-                  Black Edition Stand
-
-                  <span> Pledge $75 or more</span>
-                </label>
-
-                <span> 64 left</span>
-              </header>
-
-              <div class="project-overlay__main">
-                <span>
+                <p class="project-top__text">
                   You get a Black Special Edition computer stand and a personal
                   thank you. You’ll be added to our Backer member list. Shipping
-                  is included.</span
-                >
+                  is included.
+                </p>
+              </div>
+            </fieldset>
+
+            <fieldset class="project-bottom">
+              <span>Enter your pledge</span>
+
+              <div class="project-bottom__actions">
+                <div>
+                  <input
+                    type="number"
+                    name="amount"
+                    id="amount-stand"
+                    value="25"
+                  />
+                </div>
+
+                <button type="submit">Continue</button>
+              </div>
+            </fieldset>
+          </form>
+
+          <form
+            action="/production/payment/{{id}}"
+            method="POST"
+            class="project-overlay__project project-overlay__project--out-stock"
+          >
+            <fieldset class="project-top">
+              <legend class="sr-only">Payment method (selected)</legend>
+
+              <div class="project-top__left">
+                <input
+                  type="checkbox"
+                  name="select-bamboo-stand"
+                  id="select-stant-special"
+                />
+
+                <span class="checkmark"></span>
               </div>
 
-              <div class="project-overlay__footer">
-                Enter your pledge $75 Continue
-              </div>
-            </div>
-          </section>
+              <div class="project-top__right">
+                <div class="project-top__right__header">
+                  <label for="select-stant-special">
+                    <strong>Mahogany Special Edition</strong>
+                    <span>Pledge $200 or more</span>
+                  </label>
 
-          <section class="project-overlay__project">
-            <div class="project-overlay__project__left">
-              <input type="checkbox" id="select4" title="Select" />
-            </div>
+                  <span
+                    >0
+                    <em>left</em>
+                  </span>
+                </div>
 
-            <div class="project-overlay__project__right">
-              <header class="project-overlay__header">
-                <label for="select4">
-                  Mahogany Special Edition
-
-                  <span>Pledge $200 or more</span>
-                </label>
-
-                <span>0 left</span>
-              </header>
-
-              <div class="project-overlay__main">
-                <span>
+                <p class="project-top__text">
                   You get two Special Edition Mahogany stands, a Backer T-Shirt,
                   and a personal thank you. You’ll be added to our Backer member
                   list. Shipping is included.
-                </span>
+                </p>
               </div>
+            </fieldset>
 
-              <div class="project-overlay__footer">
-                Enter your pledge $200 Continue
+            <!-- <fieldset class="project-bottom">
+              <span>Enter your pledge</span>
+
+              <div class="project-bottom__actions">
+                <input
+                  type="number"
+                  name="amount"
+                  id="amount-stand"
+                  value="25"
+                />
+
+                <button type="submit">Continue</button>
               </div>
-            </div>
-          </section>
+            </fieldset> -->
+          </form>
         </div>
       </section>
     </div>
